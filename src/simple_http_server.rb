@@ -9,7 +9,6 @@ document_root = "c:\\DocumentRoot"
 
 loop do
     socket = server.accept
-    puts socket
     request = HttpRequest.new(socket.gets)
     response = HttpResponse.new("1.1", document_root + request.path)
     socket.print response.write
