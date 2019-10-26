@@ -1,0 +1,7 @@
+{
+    ".txt": "text/plain;charset=utf8",
+    ".html": "text/html;charset=utf8",
+    ".gif": "image/gif",
+    ".jpg": "image/jpeg",
+    ".png": "image/png"
+}

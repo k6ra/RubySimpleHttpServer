@@ -1,12 +1,16 @@
 class HttpRequest
-    attr_accessor :method
-    attr_accessor :path
-    attr_accessor :version
+    attr_reader :method
+    attr_reader :path
+    attr_reader :version
 
-    def initialize(request)
-        req_arr = request.split(" ")
-        @method = req_arr[0]
-        @path = req_arr[1].gsub(/\//, '\\\\')
-        @version = req_arr[2]
+    def initialize(method, path, version)
+        @method = method
+        @path = path
+        @version = version
     end
+
+private
+    attr_writer :method
+    attr_writer :path
+    attr_writer :version
 end
